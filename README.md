@@ -8,6 +8,6 @@ algorithms, data structures, and academic exercises.
 
 ## Repository Structure
 
-The repository is organized into folders by **year** and **programming language**.
+The repository is organized into folders by **year**, **course name** and **programming language**.
 
 
