@@ -1,0 +1,96 @@
+#!/bin/bash
+
+arr_inp=("$@")  #an array to hold the input parameters
+count_err=0
+
+if [[ ${#arr_inp[@]} -lt 3 ]]  #check if received less then 3 parameters
+then
+	 echo >&2 Number of parameters received : ${#arr_inp[@]}  #print to stderr
+	 echo "Usage : wordFinder.sh <valid file name> [More Files] ... <char> <length>"
+	 exit 1
+else  
+    one_before_last=${arr_inp[${#arr_inp[@]}-2]}
+    last=${arr_inp[${#arr_inp[@]}-1]}
+fi
+
+
+if [[ (${#one_before_last} -ne 1 || ! $one_before_last =~ ^[a-zA-Z0-9]+$) ]]  #check if the char is entered correctly
+then 
+    echo >&2 Only one char needed : $one_before_last
+	if [[ ! $last =~ ^[0-9]+$ ]] #check if the char is entered correctly
+	then 
+	     echo >&2 Not a positive number : $last
+		 echo "Usage : wordFinder.sh <valid file name> [More Files] ... <char> <length>"  #how to properlly enter the input
+		 fi
+	echo "Usage : wordFinder.sh <valid file name> [More Files] ... <char> <length>"  #how to properlly enter the input	 
+    exit 1
+
+elif [[ (${#one_before_last} -ne 1 || ! $last =~ ^[0-9]+$) ]]
+then
+     echo >&2 Not a positive number : $last
+	 echo "Usage : wordFinder.sh <valid file name> [More Files] ... <char> <length>"  #how to properlly enter the input
+	 exit 1
+	fi
+
+
+
+for file in ${arr_inp[@]:0:${#arr_inp[@]}-2} #loop to check if the file are trully files
+do
+   if [[ ! -f $file ]]
+   then   
+        echo File does not exist : $file
+		count_err+=1
+		fi
+done
+
+
+if [[ ! $count_err = 0 ]]
+then 
+     echo "Usage : wordFinder.sh <valid file name> [More Files] ... <char> <length>"  #how to properlly enter the input
+	 exit 1  #to terminate the script
+	 fi
+		
+
+touch AllFiles  #create new file to hold all files
+
+
+for file in ${arr_inp[@]:0:${#arr_inp[@]}-2}  #loop to add all files to the file i've created
+do 
+  cat $file >> AllFiles
+done  
+
+
+$(echo "$AllFiles" | tr '[:upper:]' '[:lower:]')  #change all words to lowercase
+    
+sed "s/[^a-zA-Z0-9]/ /g"   #change all chars that are not a-z, A-z, 0-9 to space
+
+touch FinalFile
+  
+while IFS= read -r line  #while the file isn't over
+do
+    for word in $line  #for each word
+    do 
+	  if [[ $word[0] == $one_before_last ]]  #stand on conditions
+	  then 
+          if [ [ ${#word} >= $last ] ]  #stand on conditions
+		  then 
+	          echo $word >> FinalFile
+		  fi 
+	  fi
+done 
+
+
+
+tr ' ' '\n' < FinalFile | \  #take only words that start with the input character and contain at least "input int" letters
+  grep "^$one_before_last" | \  
+  awk "length >= $last" | \
+  sort | \
+  uniq -c | \  #Count occurrences of each word and sort by frequency and then lexicographically (if there is a tie)
+  sort -k1,1nr -k2,2
+
+
+
+
+^T
+^T
++

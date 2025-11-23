@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ATP-Project-PartB">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ATP-Project-PartB/maze.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ATP-Project-PartB/ATP-Project-PartB.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

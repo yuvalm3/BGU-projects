@@ -1,0 +1,109 @@
+Planets
+Earth,123.1,8392,99.2
+Gaia,983.223,8521,2312
+Pluto,3454.21,124.112,985.445
+Mars,450.12,7291,215.4
+Venus,389.23,4512,134.8
+Jupiter,5200.1,12892,650.7
+Neptune,892.4,3821,190.5
+Jerries
+J1234,C-101,Earth,20
+	Height:170.3
+	Weight:75
+	LimbsNumber:4
+	Age:25
+J2345,C-102,Gaia,15
+	Height:165.2
+	Weight:60
+	LimbsNumber:3
+	Age:40
+J3456,C-103,Pluto,30
+	Height:172.5
+	Weight:80
+	LimbsNumber:2
+	Age:45
+J4567,C-104,Mars,40
+	Height:168.3
+	Weight:72
+	LimbsNumber:5
+	Age:32
+J5678,C-105,Venus,25
+	Height:160.7
+	Weight:66
+	LimbsNumber:4
+	Age:28
+J6789,C-106,Jupiter,35
+	Height:175.8
+	Weight:85
+	LimbsNumber:3
+	Age:50
+J7890,C-107,Neptune,10
+	Height:162.1
+	Weight:58
+	LimbsNumber:2
+	Age:22
+J8901,C-108,Earth,50
+	Height:172.1
+	Weight:95
+	LimbsNumber:5
+	Age:60
+J9012,C-109,Pluto,20
+	Height:169.3
+	Weight:70
+	LimbsNumber:3
+	Age:30
+J1011,C-110,Mars,15
+	Height:163.5
+	Weight:62
+	LimbsNumber:4
+	Age:24
+J1112,C-111,Gaia,22
+	Height:166.7
+	Weight:64
+	LimbsNumber:5
+	Age:29
+J1213,C-112,Earth,19
+	Height:170.5
+	Weight:68
+	LimbsNumber:4
+	Age:27
+J1314,C-113,Jupiter,14
+	Height:162.8
+	Weight:55
+	LimbsNumber:2
+	Age:19
+J1415,C-114,Neptune,17
+	Height:175.3
+	Weight:78
+	LimbsNumber:3
+	Age:36
+J1516,C-115,Venus,12
+	Height:158.9
+	Weight:50
+	LimbsNumber:4
+	Age:20
+J1617,C-116,Gaia,23
+	Height:164.1
+	Weight:73
+	LimbsNumber:6
+	Age:31
+J1718,C-117,Pluto,18
+	Height:171.3
+	Weight:77
+	LimbsNumber:4
+	Age:28
+J1819,C-118,Neptune,11
+	Height:167.5
+	Weight:65
+	LimbsNumber:5
+	Age:45
+J1920,C-119,Mars,20
+	Height:174.2
+	Weight:80
+	LimbsNumber:6
+	Age:33
+J2021,C-120,Venus,15
+	Height:161.8
+	Weight:57
+	LimbsNumber:3
+	Age:26
