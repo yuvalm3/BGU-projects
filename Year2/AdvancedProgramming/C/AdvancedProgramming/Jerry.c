@@ -119,7 +119,8 @@ bool check_PC_in_Jerry (pJerry ptr_to_jerry, char* Name_of_pc) {
 
     // Loop over all characteristics and return true/false
     for (int i = 0; i < ptr_to_jerry->number_of_physical_characteristics; i++) {
-        if (ptr_to_jerry->ptr_to_physical_characteristic[i]->Name == Name_of_pc) {
+        if (strcmp(ptr_to_jerry->ptr_to_physical_characteristic[i]->Name,
+                   Name_of_pc) == 0) {
             return true;
         }
     }
