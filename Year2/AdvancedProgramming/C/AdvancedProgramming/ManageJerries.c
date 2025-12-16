@@ -1,7 +1,7 @@
 /**
 Manage.Jerries file:
-Building a system to manage existing Jerries by Morty.
-This part will focus on writing the different Jerries and performing actions on them.
+Building a small system to manage existing Jerries by Morty.
+This part will focus on writing the different Jerries and performing actions them
 */
 
 
@@ -31,7 +31,7 @@ void clean_jerries_array(pJerry* array, int size) {
     }
 }
 
-// Function to free each PC in PC's array
+// Function to free each Jerry array
 void clean_pc_array(pPhysicalCharacteristic* array, int size) {
     int i = 0;
     for(i=0; i < size; i++) {
@@ -420,5 +420,3 @@ void main(int argc, char* argv[]) {
 
         } while (choice != 7);
 }
-
-
