@@ -1,7 +1,7 @@
 /**
 Manage.Jerries file:
-Building a small system to manage existing Jerries by Morty.
-This part will focus on writing the different Jerries and performing actions them
+Building a system to manage existing Jerries by Morty.
+This part will focus on writing the different Jerries and performing actions on them
 */
 
 
